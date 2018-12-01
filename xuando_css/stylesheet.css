@@ -1,0 +1,12 @@
+/* Author: Xuan Do */
+body {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background-color: lightblue;
+}
+/* table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+} */
+input {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}

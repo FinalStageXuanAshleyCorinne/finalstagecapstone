@@ -1,0 +1,26 @@
+/* body {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#myMovie {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#myMovie td, #myMovie th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#myMovie tr:nth-child(even){background-color: #f2f2f2;}
+
+#myMovie tr:hover {background-color: #ddd;}
+
+#myMovie th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+} */
