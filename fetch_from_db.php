@@ -38,7 +38,7 @@ $dbh = ConnectDB();
 
             <!-- Fetch from THE MUSIC DB -->
 
-            <h2>Fetch from Music DB</h2>
+            <h2>Fetch from THE MUSIC DB</h2>
 
             <?php
 
@@ -81,7 +81,7 @@ $dbh = ConnectDB();
 
             <!-- Fetch from THE PHOTO DB -->
 
-            <h2>Fetch from Pexels API</h2>
+            <h2>Fetch from THE PHOTO DB</h2>
 
             <?php
 
@@ -127,7 +127,7 @@ $dbh = ConnectDB();
 
             <!-- Fetch from THE MOVIE DB -->
 
-            <h2>Fetch from TheMovieDB.org API v3</h2>
+            <h2>Fetch from THE MOVIE DB</h2>
 
             <?php
 
