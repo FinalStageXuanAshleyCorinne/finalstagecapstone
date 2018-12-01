@@ -10,7 +10,7 @@ $dbh = ConnectDB();
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Connect to MySQL DB and display results.">
-    <title>Using TheMovieDB</title>
+    <title>Using TheMovieDB, TheMusicDB, ThePhotoDB</title>
     <meta name="author" content="Xuan Do">
     <meta name="viewport" content="width=device-width">
     <!-- Bootstrap CSS -->
