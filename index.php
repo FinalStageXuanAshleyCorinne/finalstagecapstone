@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Form to fetch database">
-    <title>Using TheMovieDB</title>
+    <title>Mood</title>
     <meta name="author" content="Xuan Do">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="xuando_css/stylesheet.css" type="text/css" />
