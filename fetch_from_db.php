@@ -16,7 +16,7 @@ $dbh = ConnectDB();
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <!-- <link rel="stylesheet" href="corinne_css/table.css" type="text/css" /> -->
+    <link rel="stylesheet" href="corinne_css/table.css" type="text/css" />
     <!-- <link rel="stylesheet" href="ashley_css/table.css" type="text/css" /> -->
     <!-- <link rel="stylesheet" href="xuando_css/table.css" type="text/css" /> -->
 
@@ -81,8 +81,9 @@ $dbh = ConnectDB();
 
             <!-- Fetch from THE PHOTO DB -->
 
-            <h2>Fetch from THE PHOTO DB</h2>
-
+            <!-- <h2>Fetch from THE PHOTO DB</h2> -->
+			
+		
             <?php
 
             // Get movie id  from querystring
@@ -92,29 +93,51 @@ $dbh = ConnectDB();
             else {
                 $mood = $_POST["mood"];
 
-                $sql = "SELECT small, url, photog FROM photo ";
+                $sql = "SELECT square, url, photog FROM photo ";	// Changed to square image for consistency CK
                 $sql .= "WHERE emotion = :mood ";
-                $sql .= "LIMIT 5";
+				$sql .= "ORDER BY RAND()";			// added RANDOM to sql statement to get new pictures each time CK
+                $sql .= "LIMIT 6";
 
                 $stmt = $dbh->prepare($sql);
                 $stmt->bindParam(':mood', $mood);  // prevents SQL injection
                 $stmt->execute();
                 $cols = $stmt->rowCount();
-
-                if ($cols > 0) {
-                    echo "<table id='myPhoto' class='table table-bordered'><thead><tr><th>Photo</th><th>URL</th><th>Photog</th></tr></thead>";
+				
+				// Original table format but removed headers, displays photo and author only
+                /*if ($cols > 0) {
+                    echo "<table id='myPhoto' class='table table-bordered'>";
                     // output data of each row
+					echo "<tr>";
                     foreach ($stmt->fetchAll() as $row ) {
-                        echo "<tr><td><img src='" . $row["small"] . "' /></td><td><a href='" . $row["url"] . "' target='_blank'> " . $row["url"] . " </a></td><td>" . $row["photog"] ."</td></tr>";
+                        echo "
+						<td><a href='" . $row["url"] . "'><img src='" . $row["square"] . "' style='width:200px;height:200px;' /></a></td>
+						
+						<td>" . $row["photog"] ."</td>";
+						echo "</tr>";
                     }
+			
                     echo "</table>";
                 } else {
                     echo "0 results";
-                }
+                } */
+				
+				// Gallery type format
+                if ($cols > 0) {
+					foreach ($stmt->fetchAll() as $row ) {
+                        echo "<div class='gallery'>
+								<a target='_blank' href='" . $row["url"] . "'>
+								<img src='" . $row["square"] . "'>
+								<div class='desc'>By: " . $row["photog"] ."</div>
+								</a>
+							</div>";
+						}
+                    }
+                else {
+                    echo "0 results";
+                } 
             }
 
             ?>
-
         </div>
         <!-- // Corinne -->
 

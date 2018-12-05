@@ -13,7 +13,10 @@ function ConnectDB() {
     $hostname = 'localhost';    // Local host, i.e. running on elvis
     $username = 'root';         // Your MySQL Username goes here
     $password = '';             // Your MySQL Password goes here
-    $dbname   = 'dox0';         // For elvis, your MySQL Username is repeated here
+    //$dbname   = 'dox0';         // For elvis, your MySQL Username is repeated here
+	
+	$dbname   = 'capstone';         // Corinne's local db for development
+	
 
     try {
         $dbh = new PDO("mysql:host=$hostname;dbname=$dbname",$username, $password);
