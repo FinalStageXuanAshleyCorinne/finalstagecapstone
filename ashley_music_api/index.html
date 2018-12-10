@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en-US" lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1">
+    <meta name="Author" content="Ashley Tribbett" />
+    <meta name="generator" content="emacs" />
+    <link rel="stylesheet" href="style.css">
+    <title>Home Page</title>
+  </head>
+  <body>
+
+    <div class="homePage">
+      <h2>Capstone Project </h2>
+      <p>Input mood recieve a movie, image, and some music</p>
+      
+      <!--Form -->
+      <form method="POST"
+            action="mood.php"> 
+        <pre><fieldset><legend>Moods</legend><table summary="A table for format"
+       cellpadding="3"
+       cellspacing="5">
+    <tbody>
+    <tr>
+   <td><input type="radio" name="mood"
+               id="moodhappy" value="happy"
+               title="happy"/><label for="moodhappy">Happy</label></td>
+    </tr>
+    <tr>           
+   <td><input type="radio" name="mood"
+               id="moodsad" value="sad"
+               title="sad"/><label for="moodsad">Sad</label></td>
+
+    </tr>
+    <tr>
+   <td><input type="radio" name="mood"
+               id="moodangry" value="angry"
+               title="angry"/><label for="moodangry">Angry</label></td>
+
+    </tr>
+    
+   <tr>
+                <td><input type="submit" value="Submit Query" /></td>
+   <td><input type="reset" value="Reset" /></td>
+   </tr>
+    </tbody>
+</table></fieldset>
+    </pre>
+      </form>
+      
+    </div>
+    
+    <footer style="border-top: 1px solid blue">
+      <span style="float: right;">
+        <a href="http://validator.w3.org/check/referer">HTML5</a> /
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">
+          CSS3 </a>
+      </span>
+    </footer>
+  </body>
+</html>
